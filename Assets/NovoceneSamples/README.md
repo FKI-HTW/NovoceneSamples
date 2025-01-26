@@ -6,13 +6,13 @@ This repository provides a Unity package, which contains samples from the [Novoc
 
 The following samples are contained within the package and can be imported individually into any project:
 
-- [Ceiling Cutout](https://github.com/FKI-HTW/NovoceneSamples/blob/main/Assets/NovoceneSamples/Samples~/CeilingCutout/CHANGELOG.md):
+- [Ceiling Cutout](https://github.com/FKI-HTW/NovoceneSamples/tree/develop/Assets/NovoceneSamples/Samples~/CeilingCutout):
     - Enables Meta Quest passthrough and spawns a cutout in the physical room's ceiling to show the skybox above.
-- [Passthrough Flashlight](https://github.com/FKI-HTW/NovoceneSamples/blob/main/Assets/NovoceneSamples/Samples~/PassthroughFlashlight/CHANGELOG.md):
+- [Passthrough Flashlight](https://github.com/FKI-HTW/NovoceneSamples/tree/develop/Assets/NovoceneSamples/Samples~/PassthroughFlashlight):
     - Shows an example of layering passthrough with different brightness scalings to create a flashlight effect in the passthrough.
-- [Scene Anchoring](https://github.com/FKI-HTW/NovoceneSamples/blob/main/Assets/NovoceneSamples/Samples~/SceneAnchoring/CHANGELOG.md):
+- [Scene Anchoring](https://github.com/FKI-HTW/NovoceneSamples/tree/develop/Assets/NovoceneSamples/Samples~/SceneAnchoring):
     - Provides scripts for anchoring objects in user-defined position, rotation, and scaling, saving the anchors between sessions and scenes.
-- [Underwater Scene](https://github.com/FKI-HTW/NovoceneSamples/blob/main/Assets/NovoceneSamples/Samples~/UnderwaterScene/CHANGELOG.md):
+- [Underwater Scene](https://github.com/FKI-HTW/NovoceneSamples/tree/develop/Assets/NovoceneSamples/Samples~/UnderwaterScene):
     - Contains a rising and lowering water shader in the physical passthrough room with object's buoyancy being physically simulated.
 
 While these samples can be used as they are, they are primarily meant to be used as bases for you to implement your own solutions on top. 
