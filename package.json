@@ -1,0 +1,49 @@
+{
+  "name": "de.htw-berlin.aurora.novocene",
+  "displayName": "NovoceneSamples",
+  "version": "1.0.0",
+  "unity": "2022.3",
+  "description": "Sample features from the AURORA project Novocene. These features use the Meta XR SDK and can be integrated and reused in any supported projects",
+  "documentationUrl": "https://github.com/FKI-HTW/NovoceneSamples/blob/main/Assets/NovoceneSamples/README.md",
+  "changelogUrl": "https://github.com/FKI-HTW/NovoceneSamples/blob/main/Assets/NovoceneSamples/CHANGELOG.md",
+  "licensesUrl": "https://github.com/FKI-HTW/NovoceneSamples/blob/main/Assets/NovoceneSamples/LICENSE.md",
+  "author": {
+    "name": "AURORA XR School for Artists",
+    "email": "aurora@htw-berlin.de",
+    "url": "https://aurora.htw-berlin.de"
+  },
+  "keywords": [
+    "Unity Package",
+    "mr",
+    "xr",
+    "meta",
+    "passthrough"
+  ],
+  "samples": [
+    {
+      "displayName": "Ceiling Cutout",
+      "description": "Enables passthrough and spawns a cutout in the physical room's ceiling to show a skybox above.",
+      "path": "Samples~/CeilingCutout"
+    },
+    {
+      "displayName": "Passthrough Flashlight",
+      "description": "Shows an example of layering passthrough with different brightness scalings to create a flashlight effect in the passthrough.",
+      "path": "Samples~/PassthroughFlashlight"
+    },
+    {
+      "displayName": "Scene Anchoring",
+      "description": "Provides scripts for anchoring objects in user-defined position, rotation, and scaling, saving the anchors between sessions and scenes.",
+      "path": "Samples~/SceneAnchoring"
+    },
+    {
+      "displayName": "UnderwaterScene",
+      "description": "Contains a rising and lowering water shader in the physical passthrough room with object's buoyancy being physically simulated.",
+      "path": "Samples~/UnderwaterScene"
+    }
+  ],
+  "dependencies": {
+    "com.meta.xr.mrutilitykit": "71.0.0",
+    "com.meta.xr.sdk.interaction.ovr": "71.0.0",
+    "com.unity.render-pipelines.universal": "14.0.11"
+  }
+}
