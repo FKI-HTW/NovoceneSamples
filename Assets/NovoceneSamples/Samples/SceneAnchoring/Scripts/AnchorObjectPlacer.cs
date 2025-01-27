@@ -3,6 +3,7 @@ using System;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace AURORA.NovoceneSamples.SceneAnchoring
@@ -128,12 +129,7 @@ namespace AURORA.NovoceneSamples.SceneAnchoring
             // Save anchor and deselect
             if (OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.RTouch))
             {
-                if (!_selectedObject.gameObject.TryGetComponent(out OVRSpatialAnchor anchor))
-                    anchor = _selectedObject.gameObject.AddComponent<OVRSpatialAnchor>();
-
-                _ = _spatialAnchorManager.SaveAnchor(anchor, _selectedObject.anchorName, _selectedObject.transform.lossyScale.x);
-                _selectedObject = null;
-                _selectedObjectLabelFilter = default;
+                SaveAnchor();
             }
             
             // Remove all anchors
@@ -159,6 +155,17 @@ namespace AURORA.NovoceneSamples.SceneAnchoring
                 SetSelectedAnchor(anchorObject);
                 return;
             }
+        }
+
+        private async void SaveAnchor()
+        {
+            if (!_selectedObject.gameObject.TryGetComponent(out OVRSpatialAnchor anchor))
+                anchor = _selectedObject.gameObject.AddComponent<OVRSpatialAnchor>();
+            
+            await Task.Delay(100);
+            await _spatialAnchorManager.SaveAnchor(anchor, _selectedObject.anchorName, _selectedObject.transform.lossyScale.x);
+            _selectedObject = null;
+            _selectedObjectLabelFilter = default;
         }
     }
 }
