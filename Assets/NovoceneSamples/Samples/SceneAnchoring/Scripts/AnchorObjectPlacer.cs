@@ -58,16 +58,14 @@ namespace AURORA.NovoceneSamples.SceneAnchoring
         {
             bool anchorsLoaded = false;
 
-            _spatialAnchorManager.LoadAnchors((unboundAnchor, anchorData, pose) =>
+            _spatialAnchorManager.LoadAnchors((_, anchorData, pose) =>
             {
                 AnchorID sceneObject = anchorObjects.FirstOrDefault(obj => obj.anchorName == anchorData.Name);
                 if (sceneObject != null)
                 {
-                    var anchor = sceneObject.gameObject.AddComponent<OVRSpatialAnchor>();
                     var trf =  sceneObject.transform;
                     trf.SetPositionAndRotation(pose.position, pose.rotation);
                     trf.localScale = Vector3.one * anchorData.Scale;
-                    unboundAnchor.BindTo(anchor);
                 }
                 anchorsLoaded = true;
             });
